@@ -1,0 +1,26 @@
+from random import randint
+najwyn = []
+best = {}
+naj = []
+kontynuowac = 0
+while kontynuowac == 0 :
+  print("podaj maksymalna liczbe jaka komputer moze wybierac")
+  los = randint(1,int(input()))
+  odp = -1
+  i = 0
+  while odp != los:
+   i += 1
+   odp =  int(input("podaj liczbe: "))
+   if odp > los :
+     print("twoja liczba jest za duza")
+   elif odp < los:
+     print("twoja liczba jest za mala")
+  print("zgad³es liczbe za" , i , "podejsciem" ) 
+  best[i] = input(print("twoj nick to?"))
+  for k in best.items():
+    naj.append(k) 
+  naj.sort() 
+  
+  print("najleprzy wynik :" , min(naj) )
+  print("jesli chcesz kontynuowac wpisz 0 jesli nie to cos innego")
+  kontynuowac = int(input())
